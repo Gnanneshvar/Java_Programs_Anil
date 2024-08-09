@@ -46,8 +46,10 @@ public class ArrayListMethods {
         while(iterator.hasNext()){
             try {
                 a = iterator.next();
-                if(a==10)
+                if(a==10) {
                     count++;
+                    iterator.remove();
+                }
             }
             catch(NullPointerException e)
             {
@@ -55,6 +57,7 @@ public class ArrayListMethods {
             }
             //System.out.println(iterator.next());
         }
+        System.out.println(arrList);
         System.out.println("Count of element 10 in the list::"+count);
 //        for(int i:arrList)
 //            System.out.println(i);
